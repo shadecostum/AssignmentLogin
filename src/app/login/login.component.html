@@ -1,0 +1,27 @@
+<div class="align-items-center text-center text-primary mt-5" >
+    <h1>Login Your Account</h1>
+</div>
+<div class="align-items-center mt-5">
+<form [formGroup]="LoginForm" (ngSubmit)="loginFormSubmitFun(LoginForm.value)" class="container mt-5 d-flex align-items-center justify-content-center">
+    <div class="col-md-5">
+        <div class="border p-5">
+            <label for="UserName">User Name</label>
+            <input type="text" id="UserName" class="form-control" formControlName="UserName" placeholder="Enter Your UserName">
+            <span *ngIf="userNameValid && userNameValid?.invalid && userNameValid?.touched" class="d-block text-danger mt-1">UserName is required</span>
+            
+            <label for="Password" class="mt-3">Password</label>
+            <input type="password" id="Password" class="form-control" formControlName="Password" placeholder="Enter your Password">
+            <span *ngIf="PasswordValid && PasswordValid?.invalid && PasswordValid?.touched" class="d-block text-danger mt-1">Password is required</span>
+            <div *ngIf="PasswordValid?.hasError('minlength') && PasswordValid?.touched" class="text-danger mt-1">
+                Password must be at least 6 characters long.
+              </div>
+            <div *ngIf="errorMessage" class="text-danger mt-2">
+                {{ errorMessage }}
+              </div>
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary" [disabled]="!LoginForm.valid">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
+</div>

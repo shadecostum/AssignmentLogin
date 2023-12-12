@@ -1,0 +1,22 @@
+[
+    {
+        "ProductName":"Bag",
+        "Quantity":3,
+        "Price":500
+    },
+    {
+        "ProductName":"Shoe",
+        "Quantity":2,
+        "Price":1000
+    },
+    {
+        "ProductName":"Shirt",
+        "Quantity":1,
+        "Price":600
+    },
+    {
+        "ProductName":"Box",
+        "Quantity":1,
+        "Price":50
+    }
+]

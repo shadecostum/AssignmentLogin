@@ -1,0 +1,117 @@
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+   
+    <!-- <form [formGroup]="departmentForm" (ngSubmit)="onSubmit(departmentForm.value)" class="container mt-4">
+      <div class="mb-3">
+          <label for="DepartmentName" class="form-label">Department Name</label>
+          <input type="text" class="form-control form-control-lg" formControlName="DepartmentName" placeholder="Enter Department Name">
+          <span *ngIf="DepartmentNameValid && DepartmentNameValid?.invalid && DepartmentNameValid?.touched" class="d-block text-danger mt-1">Department Name is required</span>
+        </div>
+        <div class="mb-3">
+          <label for="EmployessCount" class="form-label">Enter Employess Count</label>
+          <input type="number" class="form-control form-control-lg" formControlName="EmployessCount" placeholder="Enter Employess Count">
+          <span *ngIf="EmployessCountValid && EmployessCountValid?.invalid && EmployessCountValid?.touched"
+                class="d-block text-danger mt-1">Employess Count is required</span>
+        </div>
+        <div class="mb-3">
+          <label for="Address" class="form-label">Address</label>
+          <textarea id="Address" class="form-control form-control-lg" formControlName="Address" placeholder="Enter Address"></textarea>
+          <span *ngIf="AddressValid && AddressValid?.invalid && AddressValid?.touched" class="d-block text-danger mt-1">Address is required</span>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!departmentForm.valid">Submit</button>
+
+    </form>  -->
+    <form [formGroup]="departmentForm" (ngSubmit)="onSubmit(departmentForm.value)" class="container mt-4">
+      <div class="card border-0 shadow p-4">
+        <div class="mb-3">
+          <label for="DepartmentName" class="form-label">Department Name</label>
+          <input type="text" class="form-control form-control-lg" formControlName="DepartmentName" placeholder="Enter Department Name">
+          <span *ngIf="DepartmentNameValid && DepartmentNameValid?.invalid && DepartmentNameValid?.touched" class="d-block text-danger mt-1">Department Name is required</span>
+        </div>
+        <div class="mb-3">
+          <label for="EmployessCount" class="form-label">Enter Employess Count</label>
+          <input type="number" class="form-control form-control-lg" formControlName="EmployessCount" placeholder="Enter Employess Count">
+          <span *ngIf="EmployessCountValid && EmployessCountValid?.invalid && EmployessCountValid?.touched"
+                class="d-block text-danger mt-1">Employess Count is required</span>
+        </div>
+        <div class="mb-3">
+          <label for="Address" class="form-label">Address</label>
+          <textarea id="Address" class="form-control form-control-lg" formControlName="Address" placeholder="Enter Address"></textarea>
+          <span *ngIf="AddressValid && AddressValid?.invalid && AddressValid?.touched" class="d-block text-danger mt-1">Address is required</span>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!departmentForm.valid">Submit</button>
+      </div>
+    </form>
+    
+
+  </div>
+
+  <div class="col-md-6" >
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-hover" *ngIf="SalesDataArray.length > 0">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">SalesID</th>
+            <th scope="col">Department Name</th>
+            <th scope="col">Employess Count</th>
+            <th scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of SalesDataArray">
+            <td>{{ item.id }}</td>
+            <td>{{ item.DepartmentName }}</td>
+            <td>{{ item.EmployessCount }}</td>
+            <td>{{ item.Address }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+
+    <button type="button" class="btn btn-primary" (click)="ShowUpdateFun()" *ngIf="SalesDataArray.length>0">Update Table</button>
+
+    <div *ngIf="showUpdateForm">
+      <form [formGroup]="departmentUpdateForm" (ngSubmit)="onSubmitUpdateForm()" class="container mt-4">
+        <div class="mb-3">
+          <label for="SelectId" class="form-label">Select ID</label>
+          <select class="form-select form-select-lg" formControlName="id" (change)="selectedData($event)">
+            <option *ngFor="let item of SalesDataArray" [value]="item.id">{{ item.id }}</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="DepartmentName" class="form-label">Department Name</label>
+          <input type="text" class="form-control form-control-lg" formControlName="DepartmentName"
+           [(ngModel)]="singleDataFetchArray.DepartmentName">
+           <span *ngIf="DepartmentUpdateNameValid && DepartmentUpdateNameValid?.invalid && DepartmentUpdateNameValid?.touched"
+                      class="d-block text-danger mt-1">Department Name is required</span>
+      
+        </div>
+        <div class="mb-3">
+          <label for="EmployessCount" class="form-label">Select Employees Count</label>
+          <div class="dropdown">
+            <input type="number" class="form-control form-control-lg" formControlName="EmployessCount"
+            [(ngModel)]="singleDataFetchArray.EmployessCount">
+            <span *ngIf="EmployessCountUpdateValid && EmployessCountUpdateValid?.invalid && EmployessCountUpdateValid?.touched"
+                      class="d-block text-danger mt-1">Employess Count is required</span>
+      
+          </div>
+        </div> 
+        <div class="mb-3">
+          <label for="Address" class="form-label">Address</label>
+          <textarea id="Address" class="form-control form-control-lg" formControlName="Address"
+          [(ngModel)]="singleDataFetchArray.Address"
+          ></textarea>
+          <span *ngIf="AddressUpdateValid && AddressUpdateValid?.invalid && AddressUpdateValid?.touched"
+                      class="d-block text-danger mt-1">Address is required</span>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!departmentUpdateForm.valid">Submit</button>
+      </form>
+      
+      </div>
+  </div>
+</div>
+</div>
+

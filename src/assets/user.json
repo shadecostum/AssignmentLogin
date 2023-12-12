@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "UserName": "Akash",
+      "DOB": "1990-01-01",
+      "Address": "Kerala"
+    },
+    {
+      "id": 2,
+      "UserName": "Babu",
+      "DOB": "1985-05-15",
+      "Address": "New York"
+    },
+    {
+      "id": 3,
+      "UserName": "Sabu",
+      "DOB": "1978-11-30",
+      "Address": "London"
+    }
+  ]
+  

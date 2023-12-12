@@ -1,0 +1,47 @@
+/* Custom styles for the table */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.custom-table thead th {
+  background-color: #3b3836; /* Change the header background color as needed */
+  color: #fff; /* Change the header text color as needed */
+  font-weight: bold;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #f8f9fa; /* Change the hover background color as needed */
+}
+
+.custom-table tbody td {
+  border: 2px solid #adceee; /* Change the border color as needed */
+  padding: 8px;
+}
+
+.custom-table tbody td:first-child {
+  border-left: 0;
+}
+
+.custom-table tbody td:last-child {
+  border-right: 0;
+}
+
+.tbody-dark {
+  background-color: #343a40; /* Change the dark background color as needed */
+  color: #fff; /* Change the text color for dark rows as needed */
+}
+
+.table-row-hover:hover {
+  background-color: #e9ecef; /* Change the hover background color for rows as needed */
+  cursor: pointer;
+}
+
+/* Add these styles to your CSS file */
+
+
+.w-50.card:hover {
+  border: 1px solid #ced4da; /* Change the border color as needed */
+}
+

@@ -1,0 +1,21 @@
+[
+    {
+        "id":1,
+        "DepartmentName":"Sales",
+        "EmployessCount":3,
+        "Address":"kerala"
+    },
+    {
+        "id":2,
+        "DepartmentName":"Manager",
+        "EmployessCount":2,
+        "Address":"kerala"
+    },
+    {
+        "id":3,
+        "DepartmentName":"Accountent",
+        "EmployessCount":1,
+        "Address":"kerala"
+    }
+   
+]

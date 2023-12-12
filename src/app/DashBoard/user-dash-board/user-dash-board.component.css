@@ -1,0 +1,23 @@
+.navbar-nav .nav-link {
+    font-size: 26px; /* Adjust the font size as needed */
+    color: #ff6600; /* Specify the color you want */
+  }
+
+  .bg-custom {
+    background-color: #333; /* Specify the background color you want */
+  }
+
+  /* Custom styles for larger text */
+.larger-text {
+  font-size: 26px; /* Adjust the size as needed */
+}
+
+/* Custom styles for button spacing */
+.button-spacing {
+  margin-right: 25px; /* Adjust the space between buttons as needed */
+}
+
+.nav-link-button:hover {
+  background-color: rgb(244, 247, 244); /* Change this to the desired hover color */
+  color: rgb(226, 224, 224)/* Change this to the desired text color on hover */
+}
